@@ -3,11 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R5T.Larissa.Commands.Construction", "R5T.Larissa.Commands.Construction\R5T.Larissa.Commands.Construction.csproj", "{9E2A8DBD-5943-4013-94A9-16CFEE256CD6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "R5T.Larissa.Commands.Construction", "R5T.Larissa.Commands.Construction\R5T.Larissa.Commands.Construction.csproj", "{9E2A8DBD-5943-4013-94A9-16CFEE256CD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R5T.Larissa.Commands", "R5T.Larissa.Commands\R5T.Larissa.Commands.csproj", "{C56927D8-E796-4A03-A639-110F3FA93DCC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "R5T.Larissa.Commands", "R5T.Larissa.Commands\R5T.Larissa.Commands.csproj", "{C56927D8-E796-4A03-A639-110F3FA93DCC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "R5T.Larissa.Commands.Testing", "R5T.Larissa.Commands.Testing\R5T.Larissa.Commands.Testing.csproj", "{2521B2E8-BA45-4957-A9A8-CFFA4AA89C77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "R5T.Larissa.Commands.Testing", "R5T.Larissa.Commands.Testing\R5T.Larissa.Commands.Testing.csproj", "{2521B2E8-BA45-4957-A9A8-CFFA4AA89C77}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Dependencies", "_Dependencies", "{06BDFFCF-43D4-4E63-A44E-9672E43FD964}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "R5T.Heraklion", "..\..\R5T.Heraklion\source\R5T.Heraklion\R5T.Heraklion.csproj", "{98ED8F9E-93A9-4785-9612-F90741B24A27}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "R5T.Piraeus", "..\..\R5T.Piraeus\source\R5T.Piraeus\R5T.Piraeus.csproj", "{5ED643DB-5AF3-428A-891F-D174BB8017A4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "R5T.Magyar", "..\..\R5T.Magyar\source\R5T.Magyar\R5T.Magyar.csproj", "{9FF5425B-791B-4FAA-B6E5-B0F7F3792DFC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,9 +25,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{9E2A8DBD-5943-4013-94A9-16CFEE256CD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -58,5 +63,52 @@ Global
 		{2521B2E8-BA45-4957-A9A8-CFFA4AA89C77}.Release|x64.Build.0 = Release|Any CPU
 		{2521B2E8-BA45-4957-A9A8-CFFA4AA89C77}.Release|x86.ActiveCfg = Release|Any CPU
 		{2521B2E8-BA45-4957-A9A8-CFFA4AA89C77}.Release|x86.Build.0 = Release|Any CPU
+		{98ED8F9E-93A9-4785-9612-F90741B24A27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98ED8F9E-93A9-4785-9612-F90741B24A27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98ED8F9E-93A9-4785-9612-F90741B24A27}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{98ED8F9E-93A9-4785-9612-F90741B24A27}.Debug|x64.Build.0 = Debug|Any CPU
+		{98ED8F9E-93A9-4785-9612-F90741B24A27}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{98ED8F9E-93A9-4785-9612-F90741B24A27}.Debug|x86.Build.0 = Debug|Any CPU
+		{98ED8F9E-93A9-4785-9612-F90741B24A27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98ED8F9E-93A9-4785-9612-F90741B24A27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98ED8F9E-93A9-4785-9612-F90741B24A27}.Release|x64.ActiveCfg = Release|Any CPU
+		{98ED8F9E-93A9-4785-9612-F90741B24A27}.Release|x64.Build.0 = Release|Any CPU
+		{98ED8F9E-93A9-4785-9612-F90741B24A27}.Release|x86.ActiveCfg = Release|Any CPU
+		{98ED8F9E-93A9-4785-9612-F90741B24A27}.Release|x86.Build.0 = Release|Any CPU
+		{5ED643DB-5AF3-428A-891F-D174BB8017A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5ED643DB-5AF3-428A-891F-D174BB8017A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5ED643DB-5AF3-428A-891F-D174BB8017A4}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{5ED643DB-5AF3-428A-891F-D174BB8017A4}.Debug|x64.Build.0 = Debug|Any CPU
+		{5ED643DB-5AF3-428A-891F-D174BB8017A4}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5ED643DB-5AF3-428A-891F-D174BB8017A4}.Debug|x86.Build.0 = Debug|Any CPU
+		{5ED643DB-5AF3-428A-891F-D174BB8017A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5ED643DB-5AF3-428A-891F-D174BB8017A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5ED643DB-5AF3-428A-891F-D174BB8017A4}.Release|x64.ActiveCfg = Release|Any CPU
+		{5ED643DB-5AF3-428A-891F-D174BB8017A4}.Release|x64.Build.0 = Release|Any CPU
+		{5ED643DB-5AF3-428A-891F-D174BB8017A4}.Release|x86.ActiveCfg = Release|Any CPU
+		{5ED643DB-5AF3-428A-891F-D174BB8017A4}.Release|x86.Build.0 = Release|Any CPU
+		{9FF5425B-791B-4FAA-B6E5-B0F7F3792DFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FF5425B-791B-4FAA-B6E5-B0F7F3792DFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FF5425B-791B-4FAA-B6E5-B0F7F3792DFC}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9FF5425B-791B-4FAA-B6E5-B0F7F3792DFC}.Debug|x64.Build.0 = Debug|Any CPU
+		{9FF5425B-791B-4FAA-B6E5-B0F7F3792DFC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9FF5425B-791B-4FAA-B6E5-B0F7F3792DFC}.Debug|x86.Build.0 = Debug|Any CPU
+		{9FF5425B-791B-4FAA-B6E5-B0F7F3792DFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FF5425B-791B-4FAA-B6E5-B0F7F3792DFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FF5425B-791B-4FAA-B6E5-B0F7F3792DFC}.Release|x64.ActiveCfg = Release|Any CPU
+		{9FF5425B-791B-4FAA-B6E5-B0F7F3792DFC}.Release|x64.Build.0 = Release|Any CPU
+		{9FF5425B-791B-4FAA-B6E5-B0F7F3792DFC}.Release|x86.ActiveCfg = Release|Any CPU
+		{9FF5425B-791B-4FAA-B6E5-B0F7F3792DFC}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{98ED8F9E-93A9-4785-9612-F90741B24A27} = {06BDFFCF-43D4-4E63-A44E-9672E43FD964}
+		{5ED643DB-5AF3-428A-891F-D174BB8017A4} = {06BDFFCF-43D4-4E63-A44E-9672E43FD964}
+		{9FF5425B-791B-4FAA-B6E5-B0F7F3792DFC} = {06BDFFCF-43D4-4E63-A44E-9672E43FD964}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B5ED7266-C43D-4186-A700-D26B4E81ECF4}
 	EndGlobalSection
 EndGlobal
