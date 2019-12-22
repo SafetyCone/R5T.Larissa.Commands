@@ -8,6 +8,87 @@ namespace R5T.Larissa.Commands
 {
     public static class SvnContextExtensions
     {
-        //public static ICommandBuilderContext
+        public static ICommandBuilderContext<SvnAddContext> Add(this ICommandBuilderContext<SvnContext> svnContext)
+        {
+            var svnAddContext = svnContext
+                .Append("add")
+                .ChangeContext<SvnAddContext>()
+                ;
+
+            return svnAddContext;
+        }
+
+        public static ICommandBuilderContext<SvnAddContext> Add(this ICommandBuilderContext<SvnContext> svnContext, string path)
+        {
+            var svnAddContext = svnContext
+                .Add()
+                .SetPath(path)
+                ;
+
+            return svnAddContext;
+        }
+
+        public static ICommandBuilderContext<SvnCheckoutContext> Checkout(this ICommandBuilderContext<SvnContext> svnContext)
+        {
+            var svnCheckoutContext = svnContext
+                .Append("checkout")
+                .ChangeContext<SvnCheckoutContext>()
+                ;
+
+            return svnCheckoutContext;
+        }
+
+        public static ICommandBuilderContext<SvnCheckoutContext> Checkout(this ICommandBuilderContext<SvnContext> svnContext, string repositoryUrl, string localDirectoryPath)
+        {
+            var svnCheckoutContext = svnContext
+                .Checkout()
+                .SetRepositoryUrl(repositoryUrl)
+                .SetLocalDirectoryPath(localDirectoryPath)
+                ;
+
+            return svnCheckoutContext;
+        }
+
+        public static ICommandBuilderContext<SvnCommitContext> Commit(this ICommandBuilderContext<SvnContext> svnContext, string path)
+        {
+            var svnCommitContext = svnContext
+                .Append("commit")
+                .AppendQuotedValue(path)
+                .ChangeContext<SvnCommitContext>()
+                ;
+
+            return svnCommitContext;
+        }
+
+        public static ICommandBuilderContext<SvnCommitContext> Commit(this ICommandBuilderContext<SvnContext> svnContext, string path, string message)
+        {
+            var svnCommitContext = svnContext
+                .Commit(path)
+                .SetMessage(message)
+                ;
+
+            return svnCommitContext;
+        }
+
+        public static ICommandBuilderContext<TSvnContext> Quiet<TSvnContext>(this ICommandBuilderContext<TSvnContext> svnContext, bool quiet = false)
+            where TSvnContext: SvnContext
+        {
+            if(quiet)
+            {
+                svnContext.Append("--quiet");
+            }
+
+            return svnContext;
+        }
+
+        public static ICommandBuilderContext<SvnContext> Version(this ICommandBuilderContext<SvnContext> svnContext, bool quiet = false)
+        {
+            svnContext
+                .Append("--version")
+                .Quiet(quiet)
+                ;
+
+            return svnContext;
+        }
     }
 }
