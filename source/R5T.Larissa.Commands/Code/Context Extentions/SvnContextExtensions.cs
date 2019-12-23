@@ -70,6 +70,26 @@ namespace R5T.Larissa.Commands
             return svnCommitContext;
         }
 
+        public static ICommandBuilderContext<SvnInfoContext> Info(this ICommandBuilderContext<SvnContext> context)
+        {
+            var infoContext = context
+                .Append("info")
+                .ChangeContext<SvnInfoContext>()
+                ;
+
+            return infoContext;
+        }
+
+        public static ICommandBuilderContext<SvnInfoContext> Info(this ICommandBuilderContext<SvnContext> context, string path)
+        {
+            var infoContext = context
+                .Info()
+                .SetPath(path)
+                ;
+
+            return infoContext;
+        }
+
         public static ICommandBuilderContext<TSvnContext> Quiet<TSvnContext>(this ICommandBuilderContext<TSvnContext> svnContext, bool quiet = false)
             where TSvnContext: SvnContext
         {
@@ -79,6 +99,26 @@ namespace R5T.Larissa.Commands
             }
 
             return svnContext;
+        }
+
+        public static ICommandBuilderContext<SvnUpdateContext> Update(this ICommandBuilderContext<SvnContext> svnContext)
+        {
+            var updateContext = svnContext
+                .Append("update")
+                .ChangeContext<SvnUpdateContext>()
+                ;
+
+            return updateContext;
+        }
+
+        public static ICommandBuilderContext<SvnUpdateContext> Update(this ICommandBuilderContext<SvnContext> svnContex, string path)
+        {
+            var updateContext = svnContex
+                .Update()
+                .SetPath(path)
+                ;
+
+            return updateContext;
         }
 
         public static ICommandBuilderContext<SvnContext> Version(this ICommandBuilderContext<SvnContext> svnContext, bool quiet = false)
