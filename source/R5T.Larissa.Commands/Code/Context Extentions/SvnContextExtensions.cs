@@ -90,12 +90,32 @@ namespace R5T.Larissa.Commands
             return infoContext;
         }
 
+        public static ICommandBuilderContext<TSvnContext> Password<TSvnContext>(this ICommandBuilderContext<TSvnContext> svnContext, string password)
+        {
+            if(!(password is null))
+            {
+                svnContext.AppendNameQuotedValuePair("--password", password);
+            }
+
+            return svnContext;
+        }
+
         public static ICommandBuilderContext<TSvnContext> Quiet<TSvnContext>(this ICommandBuilderContext<TSvnContext> svnContext, bool quiet = false)
             where TSvnContext: SvnContext
         {
             if(quiet)
             {
                 svnContext.Append("--quiet");
+            }
+
+            return svnContext;
+        }
+
+        public static ICommandBuilderContext<TSvnContext> Username<TSvnContext>(this ICommandBuilderContext<TSvnContext> svnContext, string username)
+        {
+            if (!(username is null))
+            {
+                svnContext.AppendNameQuotedValuePair("--username", username);
             }
 
             return svnContext;
