@@ -3,7 +3,7 @@
 
 namespace R5T.Larissa.Commands
 {
-    public class SvnCheckoutContext
+    public class SvnCheckoutContext : SvnContext
     {
     }
 }
